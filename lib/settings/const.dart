@@ -156,6 +156,19 @@ const TextStyle ts_purple_16_600 = TextStyle(
   color: purpleColor,
 );
 
+extension TextStyleExtension on TextStyle {
+
+  TextStyle withOpacity(double opacity){
+    return TextStyle(
+      color: color!.withOpacity(opacity),
+      fontWeight: fontWeight,
+      fontFamily: fontFamily,
+      fontStyle: fontStyle,
+      fontSize: fontSize,
+    );
+  }
+}
+
 
 
 

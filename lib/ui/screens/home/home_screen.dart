@@ -75,13 +75,16 @@ class _HomeState extends State<Home> {
                         matchTextDirection: true,
                       ),
                       SizedBox(
-                        height: context.width * .05,
+                        width: context.width * .001,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(child: Text('Profil incomplet',style: ts_black_16_500,)),
-                          Container(child: Text('Améliorez votre profil',style: ts_gray_10_500)),
+                          SizedBox(
+                            height: context.height * .001,
+                          ),
+                          Container(child: Text('Améliorez votre profil',style: ts_gray_10_500.withOpacity(0.6))),
                         ],
                       ),
                       InkWell(

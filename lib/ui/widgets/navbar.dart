@@ -4,44 +4,67 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../settings/const.dart';
 
 Widget NavBar () {
-  return BottomNavigationBar(
-    backgroundColor: whiteColor,
-    currentIndex: 0,
-    selectedLabelStyle: ts_black_10_500,
-    unselectedLabelStyle: ts_gray_10_500,
-    showUnselectedLabels: true,
-    showSelectedLabels: true,
-    selectedFontSize: 20,
-    unselectedFontSize: 20,
-    items:  <BottomNavigationBarItem>[
-      BottomNavigationBarItem(
-        icon: SvgPicture.asset(
-          acceuilIcon,
-          matchTextDirection: true,
+  return SizedBox(
+    height: 70,
+    child: BottomNavigationBar(
+      backgroundColor: whiteColor,
+      currentIndex: 0,
+      elevation: 0,
+      showUnselectedLabels: true,
+      showSelectedLabels: true,
+      unselectedItemColor: grayColor.withOpacity(0.6),
+      selectedItemColor: blackColor,
+      selectedFontSize: 10,
+      unselectedFontSize: 10,
+      items:  <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          backgroundColor:whiteColor,
+          icon: SizedBox(
+            height: 35,
+            child: SvgPicture.asset(
+              height: 20,
+              acceuilIcon,
+            ),
+          ),
+          label: 'Accueil',
         ),
-        label: 'Accueil',
-      ),
-      BottomNavigationBarItem(
-        icon: SvgPicture.asset(
-          chatIcon,
-          matchTextDirection: true,
+
+        BottomNavigationBarItem(
+          backgroundColor:whiteColor,
+          icon: SizedBox(
+            height: 35,
+            child: SvgPicture.asset(
+              height: 20,
+              chatIcon,
+              color: grayColor.withOpacity(0.6),
+            ),
+          ),
+          label: 'Home',
         ),
-        label: 'Home',
-      ),
-      BottomNavigationBarItem(
-        icon: SvgPicture.asset(
-          alertsIcon,
-          matchTextDirection: true,
+        BottomNavigationBarItem(
+          backgroundColor:whiteColor,
+          icon: SizedBox(
+            height: 35,
+            child: SvgPicture.asset(
+              height: 20,
+              alertsIcon,
+              color: grayColor.withOpacity(0.6),
+            ),
+          ),
+          label: 'Home',
         ),
-        label: 'Home',
-      ),
-      BottomNavigationBarItem(
-        icon: SvgPicture.asset(
-          profileIcon,
-          matchTextDirection: true,
+        BottomNavigationBarItem(
+          backgroundColor:whiteColor,
+          icon: SizedBox(
+            height: 35,
+            child: SvgPicture.asset(
+              color: grayColor.withOpacity(0.6),
+                height: 20,
+              profileIcon),
+          ),
+          label: 'Profile',
         ),
-        label: 'Profile',
-      ),
-    ],
+      ],
+    ),
   );
 }
